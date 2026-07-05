@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nan Yao portfolio: AI ecosystem research, venture operations, and bilingual project management." />
+  <meta property="og:title" content="Nan Yao | AI & Venture Operations" />
+  <meta property="og:description" content="Bilingual AI ecosystem and venture operations portfolio." />
+  <meta property="og:image" content="https://starry-nn.github.io/profile01.JPG" />
+  <title>Nan Yao | AI & Venture Operations</title>
+  <style>
+    :root {
+      --bg: #f7f8f6;
+      --panel: #ffffff;
+      --ink: #17201d;
+      --muted: #64706b;
+      --line: #dfe5df;
+      --accent: #226f67;
+      --accent-2: #315b86;
+      --warm: #9a6a36;
+      --shadow: 0 18px 48px rgba(23, 32, 29, 0.08);
+      color-scheme: light;
+      scroll-behavior: smooth;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.6;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .shell {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(223, 229, 223, 0.88);
+      background: rgba(247, 248, 246, 0.92);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 68px;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .nav-links a:hover {
+      color: var(--ink);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 750;
+      cursor: pointer;
+      transition: border-color 160ms ease, background 160ms ease, color 160ms ease, transform 160ms ease;
+    }
+
+    .button:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .button.primary {
+      border-color: var(--ink);
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .button.primary:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .hero {
+      padding: 76px 0 72px;
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(120deg, rgba(34, 111, 103, 0.08), transparent 34%),
+        linear-gradient(300deg, rgba(49, 91, 134, 0.08), transparent 38%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      margin: 0 0 18px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 780px;
+      font-size: clamp(48px, 8vw, 86px);
+      line-height: 0.98;
+      letter-spacing: 0;
+      font-weight: 850;
+    }
+
+    .hero-title {
+      max-width: 780px;
+      margin-top: 24px;
+      color: #2e3b36;
+      font-size: clamp(21px, 2.8vw, 34px);
+      line-height: 1.2;
+      font-weight: 760;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 40px;
+      max-width: 720px;
+    }
+
+    .metric {
+      padding-left: 16px;
+      border-left: 2px solid var(--line);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 26px;
+      line-height: 1;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    .portrait-card {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .portrait {
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      border-radius: 6px;
+      background: #eef1ee;
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .portrait-note {
+      padding: 14px 4px 2px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    main {
+      padding: 72px 0 88px;
+    }
+
+    .section {
+      margin-top: 88px;
+    }
+
+    .section:first-child {
+      margin-top: 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 32px;
+      align-items: start;
+      margin-bottom: 34px;
+    }
+
+    .section-label {
+      color: var(--warm);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .section h2 {
+      max-width: 760px;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.12;
+      font-weight: 820;
+    }
+
+    .focus-grid,
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 10px 30px rgba(23, 32, 29, 0.04);
+    }
+
+    .focus-card {
+      padding: 24px;
+    }
+
+    .focus-card h3 {
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .focus-card p,
+    .project-card p,
+    .education-card p {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .timeline {
+      border-top: 1px solid var(--line);
+    }
+
+    .job {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 32px;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .job-meta {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .job-meta strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 14px;
+    }
+
+    .job h3 {
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 820;
+    }
+
+    .company {
+      margin-top: 5px;
+      color: var(--accent-2);
+      font-weight: 760;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      border: 1px solid rgba(34, 111, 103, 0.18);
+      border-radius: 999px;
+      padding: 4px 10px;
+      background: rgba(34, 111, 103, 0.06);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    ul {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    li + li {
+      margin-top: 10px;
+    }
+
+    li::before {
+      position: absolute;
+      top: 0.72em;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      content: "";
+    }
+
+    .project-card {
+      display: flex;
+      min-height: 300px;
+      padding: 26px;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 160ms ease, border-color 160ms ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(34, 111, 103, 0.44);
+    }
+
+    .project-card h3 {
+      font-size: 25px;
+      line-height: 1.18;
+      font-weight: 820;
+    }
+
+    .project-meta {
+      margin: 0 0 18px;
+      color: var(--warm);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .project-link {
+      margin-top: 24px;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 48px;
+    }
+
+    .education-list,
+    .skill-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .education-card,
+    .skill-group {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .education-card h3,
+    .skill-group h3 {
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .period {
+      color: var(--warm);
+      font-size: 13px;
+      font-weight: 760;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .skill-tags span {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 7px 10px;
+      background: rgba(255, 255, 255, 0.72);
+      color: #40504b;
+      font-size: 13px;
+      font-weight: 680;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      background: var(--panel);
+      padding: 44px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .footer h2 {
+      font-size: 30px;
+      line-height: 1.2;
+    }
+
+    .footer p {
+      margin-top: 8px;
+      color: var(--muted);
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 520ms ease, transform 520ms ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .section-head,
+      .job,
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        gap: 38px;
+      }
+
+      .portrait-card {
+        max-width: 360px;
+      }
+
+      .focus-grid,
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .contact-row {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .shell {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .nav-inner {
+        min-height: 62px;
+      }
+
+      .button {
+        min-height: 38px;
+        padding: 0 12px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 48px 0 52px;
+      }
+
+      h1 {
+        font-size: 45px;
+      }
+
+      .hero-title {
+        font-size: 22px;
+      }
+
+      .section {
+        margin-top: 64px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script>
+    const content = {
+      en: {
+        name: "Nan Yao",
+        shortName: "Nan",
+        eyebrow: "AI ecosystem · venture operations · bilingual execution",
+        title: "Product-minded operator turning AI market signals into research, workflows, and growth programs.",
+        about: "NYU M.S. in Project Management candidate with hands-on experience across AI media, VC platform work, investment operations, and public AI education. I work best at the intersection of research, execution, and clear storytelling.",
+        location: "New York, NY",
+        availability: "Open to AI product, venture platform, and investment operations roles",
+        nav: {
+          focus: "Focus",
+          experience: "Experience",
+          projects: "Projects",
+          education: "Education",
+          skills: "Skills",
+          contact: "Contact",
+          resume: "CV",
+          email: "Email",
+          view: "View project",
+        },
+        contact: {
+          phone: "+1 (626) 230-7307",
+          email: "yaonan1127@gmail.com",
+          linkedin: "https://www.linkedin.com/in/yaonanstarry",
+        },
+        metrics: [
+          { value: "400K+", label: "Top Rednote post views" },
+          { value: "40%", label: "Editorial workflow efficiency gain" },
+          { value: "4", label: "AI, venture, media, and education contexts" },
+        ],
+        focus: [
+          {
+            title: "AI Ecosystem Research",
+            text: "Track startups, products, founder narratives, and commercialization signals across global AI markets.",
+          },
+          {
+            title: "Venture & Investment Ops",
+            text: "Structure deal-flow inputs, company datasets, tagging systems, and memo workflows for clearer decisions.",
+          },
+          {
+            title: "Content-led Growth",
+            text: "Translate technical and market complexity into bilingual articles, newsletters, events, and social campaigns.",
+          },
+        ],
+        experience: [
+          {
+            company: "Monolith Capital",
+            role: "Investment Operations Intern",
+            location: "New York, NY",
+            period: "Oct. 2025 - Present",
+            tags: ["Investment ops", "AI datasets", "Research systems"],
+            points: [
+              "Built and maintained internal tracking and tagging templates so deal-analysis inputs stayed consistent and decision-ready.",
+              "Structured datasets on startup financing and AI products, turning scattered research into reusable analytical views.",
+              "Managed confidential Mandarin and English research workstreams with clear documentation and repeatable operating cadence.",
+            ],
+          },
+          {
+            company: "Crossing, AI Media Startup",
+            role: "Content Editor Intern",
+            location: "Shanghai, China",
+            period: "Apr. 2025 - Sep. 2025",
+            tags: ["AI media", "Editorial ops", "Market research"],
+            points: [
+              "Researched global AI startup ecosystems and emerging technologies for podcast articles, newsletters, and industry features.",
+              "Created standardized review templates, improving content output efficiency by about 40%.",
+              "Connected founder and product context with reader-friendly narratives for WeChat and cross-platform publishing.",
+            ],
+          },
+          {
+            company: "Linear Capital",
+            role: "Marketing Operations Intern",
+            location: "Shanghai, China",
+            period: "Nov. 2024 - Apr. 2025",
+            tags: ["Venture platform", "Brand ops", "Events"],
+            points: [
+              "Synthesized industry insights and global AI trends for venture brand communications and original content planning.",
+              "Supported Demo Day planning, partner coordination, and branded materials for founder-facing programs.",
+            ],
+          },
+          {
+            company: "36Kr - Waves",
+            role: "Media Operations Intern",
+            location: "Beijing, China",
+            period: "Jun. 2024 - Oct. 2024",
+            tags: ["Growth content", "Rednote", "SOP"],
+            points: [
+              "Led Rednote content planning; the strongest post reached 400K+ views and 3,000+ interactions.",
+              "Built SOPs for content workflows and data management so social operations could scale with clearer feedback loops.",
+            ],
+          },
+        ],
+        projects: [
+          {
+            name: "Wavo! AI Open Course Program",
+            role: "Deputy Project Lead",
+            period: "Oct. 2024 - Dec. 2024",
+            link: "https://mp.weixin.qq.com/s/0VYOR1ZFb41HbA2wt7oznQ",
+            desc: "Co-led a public AI education initiative helping non-technical learners understand and build AI products. Coordinated partners including Volcano Engine, ZhenFund, Zhipu AI, and Devv.ai.",
+          },
+          {
+            name: "Waves Odyssey",
+            role: "Project Assistant",
+            period: "Jul. 2024 - Aug. 2024",
+            link: "https://mp.weixin.qq.com/s/zEojryWXUlqI9le5rpOWgA",
+            desc: "Supported enterprise overseas-expansion research through market analysis, itinerary design, participant screening, and promotional visuals.",
+          },
+        ],
+        education: [
+          { school: "New York University", degree: "M.S. in Project Management", period: "2025 - Present" },
+          { school: "BNU-HKBU United International College", degree: "B.A. in Public Relations & Advertising", period: "2021 - 2025", awards: "Second-Class Scholarship" },
+          { school: "The University of Hong Kong", degree: "Summer Institute · Introduction to the World of Business Media", period: "Summer 2024", awards: "Outstanding Performance · First Place Prize" },
+          { school: "University of Edinburgh", degree: "Summer School · Business Communication and Social Media", period: "Summer 2023" },
+        ],
+        skills: [
+          { name: "AI & Product Tools", items: ["ChatGPT", "Claude", "Gemini", "Cursor", "Midjourney", "AI product research"] },
+          { name: "Venture & Operations", items: ["Deal-flow tracking", "Investment memos", "SOP design", "Dataset structuring", "Event operations"] },
+          { name: "Media & Growth", items: ["Newsletter writing", "Podcast articles", "WeChat", "Rednote", "Campaign planning"] },
+          { name: "Languages", items: ["Mandarin native", "English professional", "Cantonese"] },
+        ],
+      },
+      zh: {
+        name: "姚楠 Nan Yao",
+        shortName: "姚楠",
+        eyebrow: "AI 生态 · 创投运营 · 双语执行",
+        title: "以产品化思维，把 AI 市场信号转化为研究、工作流与增长项目。",
+        about: "纽约大学项目管理硕士在读，经历覆盖 AI 媒体、VC 平台、投资运营与公益 AI 教育。我擅长在研究、执行和清晰表达之间搭建可复用的系统。",
+        location: "纽约",
+        availability: "关注 AI 产品、创投平台、投资运营方向机会",
+        nav: {
+          focus: "方向",
+          experience: "经历",
+          projects: "项目",
+          education: "教育",
+          skills: "能力",
+          contact: "联系",
+          resume: "简历",
+          email: "邮件",
+          view: "查看项目",
+        },
+        contact: {
+          phone: "18926078654",
+          wechat: "18926078654",
+          email: "yaonan1127@gmail.com",
+          linkedin: "https://www.linkedin.com/in/yaonanstarry",
+        },
+        metrics: [
+          { value: "40w+", label: "小红书单篇最高浏览量" },
+          { value: "40%", label: "内容流程效率提升" },
+          { value: "4", label: "AI、创投、媒体、教育场景" },
+        ],
+        focus: [
+          {
+            title: "AI 生态研究",
+            text: "持续跟踪全球 AI 创业公司、产品变化、创始人叙事与商业化信号。",
+          },
+          {
+            title: "创投与投资运营",
+            text: "结构化 deal-flow 输入、公司数据集、标签系统与 memo 工作流，帮助信息进入判断状态。",
+          },
+          {
+            title: "内容增长表达",
+            text: "把复杂技术与市场议题转译成双语文章、newsletter、活动与社媒 campaign。",
+          },
+        ],
+        experience: [
+          {
+            company: "Monolith 砺思资本",
+            role: "投资运营实习生",
+            location: "纽约",
+            period: "2025.10 - 至今",
+            tags: ["投资运营", "AI 数据集", "研究系统"],
+            points: [
+              "搭建并维护内部跟踪与标签模板，使 deal 分析输入保持统一、可追踪、可判断。",
+              "整理初创公司融资与 AI 产品相关数据集，将分散研究转化为可复用的分析视图。",
+              "在严格保密要求下推进中英双语研究任务，并沉淀清晰文档与执行节奏。",
+            ],
+          },
+          {
+            company: "十字路口 Crossing",
+            role: "内容编辑实习生",
+            location: "上海",
+            period: "2025.04 - 2025.09",
+            tags: ["AI 媒体", "编辑流程", "市场研究"],
+            points: [
+              "研究全球 AI 初创生态与新兴技术，支持播客文章、newsletter 与行业专题策划。",
+              "制定标准化审核模板，使内容输出效率提升约 40%。",
+              "将创始人、产品与行业背景转译为适合微信和多平台传播的内容叙事。",
+            ],
+          },
+          {
+            company: "线性资本 Linear Capital",
+            role: "市场运营实习生",
+            location: "上海",
+            period: "2024.11 - 2025.04",
+            tags: ["创投平台", "品牌运营", "活动"],
+            points: [
+              "整理全球 AI 趋势与行业洞察，支持创投品牌传播与原创内容选题。",
+              "协助 Demo Day 活动策划、合作方协调与面向创业者项目的品牌材料制作。",
+            ],
+          },
+          {
+            company: "36氪 Waves 投资报道部",
+            role: "媒体运营实习生",
+            location: "北京",
+            period: "2024.06 - 2024.10",
+            tags: ["增长内容", "小红书", "SOP"],
+            points: [
+              "主导小红书内容规划，单篇最高 40w+ 浏览量、3,000+ 互动。",
+              "建立内容工作流与数据管理 SOP，让社媒运营具备更清晰的反馈闭环。",
+            ],
+          },
+        ],
+        projects: [
+          {
+            name: "Wavo! AI 开放课计划",
+            role: "项目第二负责人",
+            period: "2024.10 - 2024.12",
+            link: "https://mp.weixin.qq.com/s/0VYOR1ZFb41HbA2wt7oznQ",
+            desc: "共同负责公益 AI 教育项目，帮助非技术背景用户理解并搭建 AI 产品，协调火山引擎、真格基金、智谱 AI、Devv.ai 等合作伙伴。",
+          },
+          {
+            name: "Waves Odyssey",
+            role: "项目助理",
+            period: "2024.07 - 2024.08",
+            link: "https://mp.weixin.qq.com/s/zEojryWXUlqI9le5rpOWgA",
+            desc: "支持企业出海研究项目，参与市场分析、行程设计、参与者筛选与宣传材料视觉制作。",
+          },
+        ],
+        education: [
+          { school: "纽约大学", degree: "项目管理硕士 M.S.", period: "2025 - 至今" },
+          { school: "北京师范大学-香港浸会大学联合国际学院", degree: "公关与广告学士 B.A.", period: "2021 - 2025", awards: "二等奖学金" },
+          { school: "香港大学", degree: "Summer Institute · Introduction to the World of Business Media", period: "2024 夏", awards: "Outstanding Performance · First Place Prize" },
+          { school: "爱丁堡大学", degree: "Summer School · Business Communication and Social Media", period: "2023 夏" },
+        ],
+        skills: [
+          { name: "AI 与产品工具", items: ["ChatGPT", "Claude", "Gemini", "Cursor", "Midjourney", "AI 产品研究"] },
+          { name: "创投与运营", items: ["Deal-flow 跟踪", "投资 memo", "SOP 设计", "数据集结构化", "活动运营"] },
+          { name: "媒体与增长", items: ["Newsletter", "播客文章", "微信公众号", "小红书", "Campaign 策划"] },
+          { name: "语言", items: ["普通话母语", "英语专业工作", "粤语"] },
+        ],
+      },
+    };
+
+    let lang = localStorage.getItem("portfolio-redesign-lang") || "en";
+
+    function navLink(href, label) {
+      return `<a href="${href}">${label}</a>`;
+    }
+
+    function render(t) {
+      const jobs = t.experience.map(job => `
+        <article class="job reveal">
+          <div class="job-meta">
+            <strong>${job.period}</strong>
+            <span>${job.location}</span>
+          </div>
+          <div>
+            <h3>${job.role}</h3>
+            <p class="company">${job.company}</p>
+            <div class="tags">${job.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}</div>
+            <ul>${job.points.map(point => `<li>${point}</li>`).join("")}</ul>
+          </div>
+        </article>
+      `).join("");
+
+      const focus = t.focus.map(item => `
+        <article class="card focus-card reveal">
+          <h3>${item.title}</h3>
+          <p>${item.text}</p>
+        </article>
+      `).join("");
+
+      const projects = t.projects.map(project => `
+        <a class="card project-card reveal" href="${project.link}" target="_blank" rel="noopener noreferrer">
+          <div>
+            <p class="project-meta">${project.role} · ${project.period}</p>
+            <h3>${project.name}</h3>
+            <p>${project.desc}</p>
+          </div>
+          <span class="project-link">${t.nav.view}</span>
+        </a>
+      `).join("");
+
+      const education = t.education.map(item => `
+        <article class="education-card reveal">
+          <p class="period">${item.period}</p>
+          <h3>${item.school}</h3>
+          <p>${item.degree}${item.awards ? ` · ${item.awards}` : ""}</p>
+        </article>
+      `).join("");
+
+      const skills = t.skills.map(group => `
+        <article class="skill-group reveal">
+          <h3>${group.name}</h3>
+          <div class="skill-tags">${group.items.map(item => `<span>${item}</span>`).join("")}</div>
+        </article>
+      `).join("");
+
+      document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+      document.getElementById("app").innerHTML = `
+        <nav class="nav">
+          <div class="shell nav-inner">
+            <a class="brand" href="#">${t.shortName}</a>
+            <div class="nav-links">
+              ${navLink("#focus", t.nav.focus)}
+              ${navLink("#experience", t.nav.experience)}
+              ${navLink("#projects", t.nav.projects)}
+              ${navLink("#education", t.nav.education)}
+              ${navLink("#contact", t.nav.contact)}
+            </div>
+            <div class="nav-actions">
+              <a class="button" href="https://starry-nn.github.io/Nan_Yao_Resume.pdf" target="_blank" rel="noopener noreferrer">${t.nav.resume}</a>
+              <button class="button primary" type="button" onclick="toggleLang()">${lang === "en" ? "中文" : "EN"}</button>
+            </div>
+          </div>
+        </nav>
+
+        <header class="hero">
+          <div class="shell hero-grid">
+            <section class="reveal">
+              <p class="eyebrow">${t.eyebrow}</p>
+              <h1>${t.name}</h1>
+              <p class="hero-title">${t.title}</p>
+              <p class="hero-copy">${t.about}</p>
+              <div class="hero-actions">
+                <a class="button primary" href="mailto:${t.contact.email}">${t.nav.email}</a>
+                <a class="button" href="${t.contact.linkedin}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="button" href="https://starry-nn.github.io/Nan_Yao_Resume.pdf" target="_blank" rel="noopener noreferrer">${t.nav.resume}</a>
+              </div>
+              <div class="metrics">
+                ${t.metrics.map(metric => `<div class="metric"><strong>${metric.value}</strong><span>${metric.label}</span></div>`).join("")}
+              </div>
+            </section>
+            <aside class="portrait-card reveal">
+              <div class="portrait"><img src="https://starry-nn.github.io/profile01.JPG" alt="${t.name}" /></div>
+              <p class="portrait-note">${t.location} · ${t.availability}</p>
+            </aside>
+          </div>
+        </header>
+
+        <main class="shell">
+          <section class="section" id="focus">
+            <div class="section-head reveal">
+              <p class="section-label">${t.nav.focus}</p>
+              <h2>${lang === "en" ? "A practical bridge between AI markets, venture workflows, and audience-facing narratives." : "连接 AI 市场、创投工作流与面向受众叙事的实践型桥梁。"}</h2>
+            </div>
+            <div class="focus-grid">${focus}</div>
+          </section>
+
+          <section class="section" id="experience">
+            <div class="section-head reveal">
+              <p class="section-label">${t.nav.experience}</p>
+              <h2>${lang === "en" ? "Experience built around research quality, operating rhythm, and scalable content systems." : "围绕研究质量、执行节奏与可规模化内容系统展开的经历。"}</h2>
+            </div>
+            <div class="timeline">${jobs}</div>
+          </section>
+
+          <section class="section" id="projects">
+            <div class="section-head reveal">
+              <p class="section-label">${t.nav.projects}</p>
+              <h2>${lang === "en" ? "Selected projects across AI education and global business research." : "AI 教育与全球化商业研究方向的代表项目。"}</h2>
+            </div>
+            <div class="project-grid">${projects}</div>
+          </section>
+
+          <section class="section two-col">
+            <div id="education">
+              <div class="section-head reveal">
+                <p class="section-label">${t.nav.education}</p>
+                <h2>${lang === "en" ? "Education" : "教育背景"}</h2>
+              </div>
+              <div class="education-list">${education}</div>
+            </div>
+            <div id="skills">
+              <div class="section-head reveal">
+                <p class="section-label">${t.nav.skills}</p>
+                <h2>${lang === "en" ? "Skills" : "能力栈"}</h2>
+              </div>
+              <div class="skill-list">${skills}</div>
+            </div>
+          </section>
+        </main>
+
+        <footer class="footer" id="contact">
+          <div class="shell footer-inner">
+            <div>
+              <h2>${lang === "en" ? "Let’s build useful AI workflows." : "一起搭建真正有用的 AI 工作流。"}</h2>
+              <p>${t.contact.email}${lang === "zh" ? ` · 微信 ${t.contact.wechat}` : ""}</p>
+            </div>
+            <div class="contact-row">
+              <a class="button primary" href="mailto:${t.contact.email}">${t.nav.email}</a>
+              <a class="button" href="${t.contact.linkedin}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a class="button" href="https://starry-nn.github.io/Nan_Yao_Resume.pdf" target="_blank" rel="noopener noreferrer">${t.nav.resume}</a>
+            </div>
+          </div>
+        </footer>
+      `;
+
+      requestAnimationFrame(() => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        document.querySelectorAll(".reveal").forEach(node => observer.observe(node));
+      });
+    }
+
+    window.toggleLang = function () {
+      lang = lang === "en" ? "zh" : "en";
+      localStorage.setItem("portfolio-redesign-lang", lang);
+      render(content[lang]);
+    };
+
+    render(content[lang]);
+  </script>
+</body>
+</html>
